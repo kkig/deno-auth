@@ -1,5 +1,3 @@
-Experimental project to test auth with Deno
-
 # fresh project
 
 ### Usage
