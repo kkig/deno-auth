@@ -17,13 +17,18 @@ function Login() {
 
 export const handler: Handlers = {
   GET(req, ctx) {
+    const headers = new Headers(req.headers);
     const cookies = getCookies(req.headers);
-    return ctx.render!({isAllowed: cookies.auth === 'auth'});
+    console.log(cookies);
+    return ctx.render!({isAllowed: cookies.auth === 'bar'});
   },
 };
 
 export default function Home({data}: PageProps<Data>) {
   return (
-    <div>You currently {data.isAllowed ? 'are' : 'are not'} logged in.</div>
+    <>
+      <div>You currently {data.isAllowed ? 'are' : 'are not'} logged in.</div>
+      {!data.isAllowed ? <Login /> : <a href='/logout'>Logout</a>}
+    </>
   );
 }

@@ -12,7 +12,7 @@ export const handler: Handlers = {
       setCookie(headers, {
         name: 'auth',
         value: 'bar',
-        maxAge: 120,
+        maxAge: 60 * 60,
         sameSite: 'Lax', // Set to prevent CSRF attacks
         domain: url.hostname,
         path: '/',
@@ -20,6 +20,7 @@ export const handler: Handlers = {
       });
 
       headers.set('location', '/');
+
       return new Response(null, {
         status: 303,
         headers,
