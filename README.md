@@ -1,5 +1,7 @@
 # fresh project
 
+User name is currently hardcoded as 'deno' & 'land'.
+
 ### Usage
 
 Start the project:
