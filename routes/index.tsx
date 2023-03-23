@@ -9,8 +9,16 @@ interface Data {
 function Login() {
   return (
     <form method='post' action='/api/login'>
-      <input type='text' name='username' />
-      <input type='password' name='password' />
+      <input
+        type='text'
+        name='username'
+        style='border: thick double gainsboro'
+      />
+      <input
+        type='password'
+        name='password'
+        style='border: thick double gainsboro'
+      />
       <button type='submit'>Submit</button>
     </form>
   );
