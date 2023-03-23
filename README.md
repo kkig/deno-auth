@@ -1,6 +1,6 @@
 # fresh project
 
-User name is currently hardcoded as 'deno' & 'land'.
+User name and pssword are currently hardcoded as 'deno' & 'land'.
 
 ### Usage
 
