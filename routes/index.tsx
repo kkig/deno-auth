@@ -50,7 +50,6 @@ export const handler: Handlers = {
 };
 
 export default function Home({data}: PageProps<Data>) {
-  console.log(data);
   return (
     <>
       <div>You currently {data.isAllowed ? 'are' : 'are not'} logged in.</div>
