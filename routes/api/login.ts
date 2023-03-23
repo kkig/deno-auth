@@ -26,9 +26,14 @@ export const handler: Handlers = {
         headers,
       });
     } else {
-      return new Response(null, {
-        status: 403,
-      });
+      url.pathname = '/'; // Redirect to Home page
+      url.search = '?invalid=true';
+
+      return Response.redirect(url, 302);
+
+      //   return new Response(JSON.stringify({isValid: false}), {
+      //     headers: {'Content-Type': 'application/json'},
+      //   });
     }
   },
 };
