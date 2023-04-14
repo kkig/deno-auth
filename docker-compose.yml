@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    build: app
     container_name: deno-auth
     image: deno-image
     ports:
